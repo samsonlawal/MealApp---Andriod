@@ -6,14 +6,19 @@ import { StatusBar } from "react-native";
 export default function HomeScreen() {
   return (
     <>
-      <StatusBar barStyle={"default"} backgroundColor={"red"} />
+      <StatusBar backgroundColor={"white"} />
       <View style={styles.Container}>
+        <Category color="red" />
+        <Category color="blue" />
+        <Category color="green" />
+        <Category color="violet" />
+        <Category color="black" />
+
+        {/* <Category />
         <Category />
         <Category />
         <Category />
-        <Category />
-        <Category />
-        <Category />
+        <Category /> */}
       </View>
     </>
   );

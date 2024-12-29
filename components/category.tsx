@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 
-function Category() {
-  const backGroundColor = { backgroundColor: "green" };
+function Category({ color }: { color: string }) {
+  const backGroundColor = { backgroundColor: color };
 
   return (
     <View style={[styles.category, backGroundColor]}>
