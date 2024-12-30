@@ -1,25 +1,13 @@
-import Category from "@/components/category";
+import CategoriesScreen from "@/screens/categories";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "react-native";
 
 export default function HomeScreen() {
   return (
     <>
       <StatusBar backgroundColor={"white"} />
-      <View style={styles.Container}>
-        <Category color="red" />
-        <Category color="blue" />
-        <Category color="green" />
-        <Category color="violet" />
-        <Category color="black" />
-
-        {/* <Category />
-        <Category />
-        <Category />
-        <Category />
-        <Category /> */}
-      </View>
+      <CategoriesScreen />
     </>
   );
 }
