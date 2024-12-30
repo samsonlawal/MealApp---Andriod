@@ -1,13 +1,21 @@
 import CategoriesScreen from "@/screens/categories";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 export default function HomeScreen() {
   return (
     <>
-      <StatusBar backgroundColor={"white"} />
-      <CategoriesScreen />
+      <StatusBar style="light" />
+      {/* <NavigationContainer> */}
+      <Stack.Navigator>
+        <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
+      </Stack.Navigator>
+      {/* </NavigationContainer> */}
     </>
   );
 }
@@ -17,7 +25,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     alignItems: "center",
-    backgroundColor: "white",
     justifyContent: "space-evenly",
     padding: 10,
     gap: 10,
