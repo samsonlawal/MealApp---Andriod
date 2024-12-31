@@ -1,10 +1,11 @@
 import CategoriesScreen from "@/screens/categories";
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MealOverviewScreen from "@/screens/MealOverview";
+
 
 const Stack = createNativeStackNavigator();
 

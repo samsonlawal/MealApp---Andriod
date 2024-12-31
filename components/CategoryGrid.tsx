@@ -1,4 +1,9 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { useFonts } from "expo-font";
+import {
+  Montserrat_600SemiBold,
+  Montserrat_700Bold,
+} from "@expo-google-fonts/montserrat";
 
 function CategoryGrid({
   color,
@@ -9,7 +14,10 @@ function CategoryGrid({
   title: string;
   onPress: () => void;
 }) {
-  const backGroundColor = { backgroundColor: color };
+  const [fontsLoaded] = useFonts({
+    Montserrat_600SemiBold,
+    Montserrat_700Bold,
+  });
 
   return (
     <View style={[styles.gridItem, { backgroundColor: color }]}>
@@ -19,7 +27,11 @@ function CategoryGrid({
         onPress={onPress}
       >
         <View style={styles.innerContainer}>
-          <Text style={styles.title}>{title}</Text>
+          <Text
+            style={[styles.title, { fontFamily: "Montserrat_600SemiBold" }]}
+          >
+            {title}
+          </Text>
         </View>
       </Pressable>
     </View>
@@ -31,23 +43,14 @@ export default CategoryGrid;
 const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
-    margin: 16,
+    margin: 12,
     height: 150,
     borderRadius: 8,
-    elevation: 4,
-    shadowColor: "black",
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 2 },
-    // backgroundColor: "white",
     overflow: "hidden",
   },
 
   button: {
     flex: 1,
-  },
-
-  buttonPressed: {
-    opacity: 0.5,
   },
 
   innerContainer: {
@@ -58,7 +61,6 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontWeight: "bold",
     fontSize: 18,
   },
 
