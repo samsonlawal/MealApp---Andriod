@@ -10,7 +10,9 @@ function MealOverviewScreen({ route }: { route: any }) {
   });
 
   function renderMealItem(itemData: any) {
-    return <MealItem title={itemData.item.title} />;
+    return (
+      <MealItem title={itemData.item.title} imageUrl={itemData.item.imageUrl} />
+    );
   }
 
   return (

@@ -12,13 +12,11 @@ const Stack = createNativeStackNavigator();
 export default function HomeScreen() {
   return (
     <>
-      <StatusBar style="light" />
-      {/* <NavigationContainer> */}
+      <StatusBar style="dark" />
       <Stack.Navigator>
         <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
         <Stack.Screen name="MealOverview" component={MealOverviewScreen} />
       </Stack.Navigator>
-      {/* </NavigationContainer> */}
     </>
   );
 }
